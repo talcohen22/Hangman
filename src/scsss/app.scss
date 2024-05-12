@@ -1,0 +1,66 @@
+.main-app {
+
+    font-size: 40px;
+    font-family:cursive;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style-type: none;
+
+        li{
+            width: 50px;
+            height: 60px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .user-didnt-guess{
+            color: red;
+        }
+    }
+
+    .keyword{
+        max-width: 500px;
+
+        li{
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: rgb(227, 242, 247);
+
+            &:hover{
+                background-color: rgb(203, 217, 221);
+            }
+        }
+
+        li.lose:not(.clicked-and-contains){
+            cursor:not-allowed;
+            background-color: rgb(240, 240, 240);
+        }
+
+        .clicked-and-contains{
+            background-color: rgb(107, 171, 249);
+        }
+
+        .clicked-and-not-contains{
+            background-color: rgb(235, 235, 235);
+        }
+    }
+
+    .lose-message{
+        font-size: 24px;
+        color: red;
+    }
+
+    .win-message{
+        font-size: 24px;
+        color: rgb(10, 211, 3);
+    }
+
+}
